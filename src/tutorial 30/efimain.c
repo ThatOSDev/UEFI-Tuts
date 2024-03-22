@@ -302,7 +302,7 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
 	{
 		if(CompareGuid(&configTable[index].VendorGuid, &ACPI_20_TABLE_GUID))
 		{
-			if(strcmp((char*)"RSD PTR ", (char*)configTable->VendorTable) == 1)
+			if(strcmp((char*)"RSD PTR ", (char*)configTable->VendorTable) == 0)
 			{
 				tempRSDP = (void*)configTable->VendorTable;
 			}
