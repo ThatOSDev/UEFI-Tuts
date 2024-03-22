@@ -184,7 +184,7 @@ void gdt_init() {
 
 	__asm__ __volatile__(
         "push %0\n\t"
-        "push $1\n\t"                 
+        "push $1f\n\t"                 
         "lretq\n\t"
         "1:\n\t"
         "mov %1, %%ds\n\t"
